@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 const RepositoryItem = ({
   repository
@@ -14,10 +14,8 @@ const RepositoryItem = ({
     reviewCount
   } = repository;
 
-  console.log(repository);
-
   return (
-    <>
+    <View>
       <RepositoryData label={'Full name'} content={fullName} />
       <RepositoryData label={'Description'} content={description} />
       <RepositoryData label={'Language'} content={language} />
@@ -25,7 +23,7 @@ const RepositoryItem = ({
       <RepositoryData label={'Forks'} content={forksCount} />
       <RepositoryData label={'Reviews'} content={reviewCount} />
       <RepositoryData label={'Rating'} content={ratingAverage} />
-    </>
+    </View>
   );
 };
 
